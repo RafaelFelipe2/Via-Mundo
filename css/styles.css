@@ -1,0 +1,474 @@
+/*Principa*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Nav*/
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    z-index: 1000;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*Botoes*/
+.Centralizar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;   
+}
+.BotaoHome {
+    width: 100%;
+    max-width: 400px;
+    background: linear-gradient(135deg, rgba(255, 223, 150, 0.4), rgba(150, 111, 51, 0.4)); /* Gradiente suave */
+    backdrop-filter: blur(15px);
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    padding: 18px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+.BotaoHome:hover {
+    background: linear-gradient(135deg, rgba(255, 223, 150, 0.6), rgba(150, 111, 51, 0.6));
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.BotaoUniversal {
+    width: 100%;
+    padding: 10px;
+    border-radius: 9999px;
+    margin-top: 10px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.BotaoUniversal:hover {
+    background-color: #414445;
+}
+
+
+/*Formulario*/
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    position: relative;
+}
+h1 {
+    font-family: 'TAN-MIGNON', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 32px;
+    color: #000;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+input {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 9999px;
+    border: 1px solid #000;
+    background-color: transparent;
+    font-size: 14px;
+    color: #000;
+}
+input::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+.BotaoUniversal {
+    width: 100%;
+    padding: 10px;
+    border-radius: 9999px;
+    margin-top: 10px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.BotaoUniversal:hover {
+    background-color: #414445;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px 0;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.divider span {
+    padding: 0 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+.social-login .BotaoUniversal {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.signup-link {
+    text-align: center;
+    font-size: 12px;
+    
+}
+.signup-link a {
+    color: #4285F4;
+    text-decoration: none;
+}
+.Cor{
+    color: #000;
+}
+
+/*Cards*/
+
+.content {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.pacotes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Fundo transparente com leve transparência */
+    backdrop-filter: blur(10px); /* Efeito vidro fosco */
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil para destacar */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: white;
+    margin: 10px 0;
+}
+
+.card p {
+    color: white;
+    margin: 5px 0;
+}
+
+.Preco {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.Titulo{
+    color: #fff;
+}
+button {
+    background-color: rgba(0, 0, 0, 0.6); /* Cor neutra no lugar do roxo */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*Detalhes*/
+main {
+    width: 80%;
+    max-width: 900px;
+    background-color: rgba(30, 30, 50, 0.95); 
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); 
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px 0;
+}
+  
+h1 {
+
+    color: #b99aff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+  
+p {
+    font-size: 16px;
+    color: #e0e0e0;
+    line-height: 1.7; 
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+  
+.informacoes {
+    background: #2a243a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    margin-top: 15px;
+}
+  
+.informacoes p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+  
+.reserva {
+    margin-top: 20px;
+    background: #2a243a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+  
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #4a2975;
+    color: white;
+    outline: none;
+}
+  
+button {
+    background-color: #4a2975;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+  
+button:hover {
+    background-color: #663399;
+}
+   
+.White {
+    color: white;
+}
+  
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+        padding: 15px;
+}
+  
+h1 {
+        font-size: 22px;
+}
+  
+p {
+        font-size: 14px;
+}
+}
+  
+.informacoes, .reserva {
+    background-color: #292744;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    color: white;
+    
+}
+  
+.informacoes h2, .reserva h2 {
+    color: #cdb4ff;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+}
+
+.roteiro{
+    padding: 15px;
+}
+  
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+    padding-left: 15px;
+    position: relative;
+    color: #d8b4fe;
+    font-weight: bold;
+}
+ 
+ul li::before {
+    content: "✔";
+    color: #c0a4ff;
+    position: absolute;
+    left: 0;
+}
+ 
+.reserva input {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 10px;
+    border: 2px solid #c0a4ff;
+    background-color: #0f0e13;
+    color: white;
+    border-radius: 5px;
+}
+ 
+#reservar {
+    background: linear-gradient(135deg, #6d28d9, #a78bfa);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+#reservar:hover {
+    background: linear-gradient(135deg, #4c1d95, #7c3aed);
+    transform: scale(1.05);
+}
+ 
+input[type="number"] {
+    background-color: #533b8b;
+    border: 2px solid #9a7af1;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+    border-color: #b99aff;
+    background-color: #6b4fb2;
+}
+
+
+/*Footer*/
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    z-index: 1000;
+}

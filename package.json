@@ -1,0 +1,33 @@
+{
+  "name": "via-mundo",
+  "version": "1.0.0",
+  "description": "Pacote de Viagens Via Mundo",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelFelipe2/Agencia-De-Viagem.git"
+  },
+  "keywords": [
+    "express",
+    "sessão",
+    "nodejs",
+    "servidor",
+    "web",
+    "http"
+  ],
+  "author": "Rafal Gobetti Felipe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelFelipe2/Agencia-De-Viagem/issues"
+  },
+  "homepage": "https://github.com/RafaelFelipe2/Agencia-De-Viagem#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  }
+}
