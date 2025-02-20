@@ -48,8 +48,23 @@ app.get("/Pacotes", autenticar, (requisicao, resposta) => {
   resposta.sendFile(path.resolve("privado/Pacotes.html"));
 });
 
-app.get("/detalhado", autenticar, (requisicao, resposta) => {
-  resposta.sendFile(path.resolve("privado/detalhado.html"));
+app.get("/detalhadoCanada", autenticar, (requisicao, resposta) => {
+  resposta.sendFile(path.resolve("privado/detalhadoCanada.html"));
+});
+app.get("/DetalhadoTokyo", autenticar, (requisicao, resposta) => {
+  resposta.sendFile(path.resolve("privado/detalhadoTokyo.html"));
+});
+app.get("/DetalhadoLondres", autenticar, (requisicao, resposta) => {
+  resposta.sendFile(path.resolve("privado/DetalhadoLondres.html"));
+});
+app.get("/DetalhadoNovaYork", autenticar, (requisicao, resposta) => {
+  resposta.sendFile(path.resolve("privado/DetalhadoNovaYork.html"));
+});
+app.get("/DetalhadoAustralia", autenticar, (requisicao, resposta) => {
+  resposta.sendFile(path.resolve("privado/detalhadoAustralia.html"));
+});
+app.get("/DetalhadoCaribe", autenticar, (requisicao, resposta) => {
+  resposta.sendFile(path.resolve("privado/DetalhadoCaribe.html"));
 });
 
 app.get("/logout", (requisicao, resposta) => {

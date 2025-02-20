@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Via Mundo</title>
+  </head>
+  <body>
+    <header>
+      <div>Via Mundo</div>
+      <nav>
+        <a href="/index">Início</a>
+        <a href="/login">Login</a>
+      </nav>
+    </header>
+    <div class="image-container">
+      <img src="img/CaribeDetalhado.jpg" alt="Imagem de fundo" />
+    </div>
+
+    <main>
+      <section>
+        <h4>Pacote de Viagem para o Caribe</h4>
+        <p>
+          Descubra as maravilhas do Caribe com nosso pacote exclusivo. Desfrute
+          de 10 dias de praias paradisíacas e cultura vibrante.
+        </p>
+
+        <div class="informacoes">
+          <h2>Roteiro da Viagem</h2>
+          <p>
+            Aventure-se em uma jornada inesquecível por paisagens deslumbrantes
+            e destinos paradisíacos, explorando o melhor do Caribe em 10 dias
+            emocionantes.
+          </p>
+          <p><strong>Nosso pacote inclui:</strong></p>
+          <ul>
+            <li>Passagens aéreas de ida e volta.</li>
+            <li>Hospedagem em resorts all-inclusive.</li>
+            <li>Traslados entre aeroportos, hotéis e pontos turísticos.</li>
+            <li>Passeios guiados e ingressos para atrações.</li>
+            <li>Alimentação e bebidas inclusas.</li>
+            <li>Suporte 24 horas.</li>
+          </ul>
+
+          <h3 class="roteiro">Roteiro detalhado:</h3>
+          <p>
+            <strong>Dia 1:</strong> Chegada ao Caribe - Recepção no aeroporto e
+            tempo livre para curtir a praia.
+          </p>
+          <p>
+            <strong>Dia 2:</strong> Passeio de barco pelas ilhas paradisíacas.
+          </p>
+          <p>
+            <strong>Dia 3:</strong> Mergulho com snorkel em recifes de coral.
+          </p>
+          <p>
+            <strong>Dia 4:</strong> Exploração de cidades históricas coloniais.
+          </p>
+          <p>
+            <strong>Dia 5:</strong> Dia de relaxamento em um spa à beira-mar.
+          </p>
+          <p>
+            <strong>Dia 6:</strong> Passeio de jet ski e esportes aquáticos.
+          </p>
+          <p>
+            <strong>Dia 7:</strong> Visita a uma vila de pescadores e cultura
+            local.
+          </p>
+          <p>
+            <strong>Dia 8:</strong> Noite especial com jantar temático e música
+            ao vivo.
+          </p>
+          <p><strong>Dia 9:</strong> Dia livre para compras e lazer.</p>
+          <p><strong>Dia 10:</strong> Retorno ao Brasil.</p>
+        </div>
+
+        <div class="reserva">
+          <h2>Informações da Viagem</h2>
+          <p><strong>Duração:</strong> 10 dias</p>
+          <p><strong>Local de Partida:</strong> São Paulo, Brasil</p>
+          <p><strong>Preço por pessoa:</strong> R$ 1.499,00</p>
+          <p><strong>Lugares disponíveis:</strong> 20</p>
+
+          <label for="quantidade">Quantidade de lugares:</label>
+          <input type="number" id="quantidade" value="1" min="1" max="20" />
+          <p>
+            <strong>Valor total:</strong>
+            <span id="valorTotal">R$ 1.499,00</span>
+          </p>
+
+          <button id="reservar">Reservar Agora</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="White">
+      &copy; 2024 Via Mundo. Todos os direitos reservados.
+    </footer>
+  </body>
+</html>
+
+<script>
+  document.getElementById("quantidade").addEventListener("input", function () {
+    const precoPorPessoa = 1499;
+    const quantidade = parseInt(this.value) || 1;
+    const valorTotal = precoPorPessoa * quantidade;
+    document.getElementById(
+      "valorTotal"
+    ).textContent = `R$ ${valorTotal.toLocaleString("pt-BR", {
+      minimumFractionDigits: 2,
+    })}`;
+  });
+</script>
