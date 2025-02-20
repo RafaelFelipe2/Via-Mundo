@@ -11,49 +11,47 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use("/css", express.static(path.join(__dirname, "css")));
 
-
-app.use(session({
+app.use(
+  session({
     secret: "m1Nh4Ch4v3S3cR3t4",
     resave: false,
     saveUninitialized: false,
     cookie: {
-        maxAge: 1000 * 60 * 15 // 15 minutos
-    }
-}));
-
+      maxAge: 1000 * 60 * 15, // 15 minutos
+    },
+  })
+);
 
 app.get("/login", (requisicao, resposta) => {
-    resposta.sendFile(path.resolve("publico/login.html"));
+  resposta.sendFile(path.resolve("publico/login.html"));
 });
 
-
 app.post("/login", (requisicao, resposta) => {
-    const { usuario, senha } = requisicao.body;
+  const { usuario, senha } = requisicao.body;
 
-    if (usuario === "admin" && senha === "admin") {
-        requisicao.session.autenticado = true;
-        resposta.redirect('/Pacotes');
-    } else {
-        resposta.redirect('/login');
-    }
+  if (usuario === "admin" && senha === "admin") {
+    requisicao.session.autenticado = true;
+    resposta.redirect("/Pacotes");
+  } else {
+    resposta.redirect("/login");
+  }
 });
 
 app.get("/Pacotes", autenticar, (requisicao, resposta) => {
-    resposta.sendFile(path.resolve("privado/Pacotes.html"));
+  resposta.sendFile(path.resolve("privado/Pacotes.html"));
 });
 
 app.get("/detalhado", autenticar, (requisicao, resposta) => {
-    resposta.sendFile(path.resolve("privado/detalhado.html"));
+  resposta.sendFile(path.resolve("privado/detalhado.html"));
 });
 
 app.get("/logout", (requisicao, resposta) => {
-    requisicao.session.destroy();
-    resposta.redirect('/login');
+  requisicao.session.destroy();
+  resposta.redirect("/login");
 });
 
 app.use(express.static("publico"));
@@ -61,10 +59,9 @@ app.use(express.static("publico"));
 app.use(autenticar, express.static("privado"));
 
 app.get("/login", (requisicao, resposta) => {
-    resposta.sendFile(path.resolve("publico/login.html"));
+  resposta.sendFile(path.resolve("publico/login.html"));
 });
 
 app.listen(porta, localhost, () => {
-    console.log(`Servidor rodando em http://${localhost}:${porta}`);
+  console.log(`Servidor rodando em http://${localhost}:${porta}`);
 });
-

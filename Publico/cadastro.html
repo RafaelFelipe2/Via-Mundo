@@ -1,52 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Via Mundo</title>
-</head>
-<body>
-<header>
-    <div>Via Mundo</div>
-    <nav>
+  </head>
+  <body>
+    <header>
+      <div>Via Mundo</div>
+      <nav>
         <a href="/index">Início</a>
         <a href="/login">Login</a>
-    </nav>
-</header>
+      </nav>
+    </header>
     <div class="image-container">
-        <img src="img/Teste.jpeg" alt="Imagem de fundo">
+      <img src="img/Teste.jpeg" alt="Imagem de fundo" />
     </div>
-        <div class="container">
-            <h1>Cadastre-se</h1>
-            <form method="POST" action="/login" class="needs-validation" novalidate  id="loginForm">
-                <div class="form-group">
-                    <label for="Nome">Nome</label>
-                    <input type="text" id="Nome" name="Nome" placeholder="Nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="SegundoNome">Sobre Nome</label>
-                    <input type="text" id="SegundoNome" name="SegundoNome" placeholder="Sobre Nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="Email">Email</label>
-                    <input type="email" id="Email" name="Email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" placeholder="senha" required>
-                </div>
-                <div class="form-group">
-                    <label for="senha">Confirme a senha:</label>
-                    <input type="password" id="senha" name="senha" placeholder="Confirme a senha" required>
-                </div>
-    
-                <button class="BotaoUniversal" type="submit">Cadastrar</button>
-                <button class="BotaoUniversal" type="voltar">Cancelar</button>
-            </form>
+    <div class="container">
+      <h1>Cadastre-se</h1>
+      <form
+        method="POST"
+        action="/login"
+        class="needs-validation"
+        novalidate
+        id="loginForm"
+      >
+        <div class="form-group">
+          <label for="Nome">Nome</label>
+          <input
+            type="text"
+            id="Nome"
+            name="Nome"
+            placeholder="Nome"
+            required
+          />
         </div>
-<footer class="White">
-    &copy; 2024 MundoTurismo. Todos os direitos reservados.
-</footer>
-</body>
+        <div class="form-group">
+          <label for="SegundoNome">Sobre Nome</label>
+          <input
+            type="text"
+            id="SegundoNome"
+            name="SegundoNome"
+            placeholder="Sobre Nome"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="Email">Email</label>
+          <input
+            type="email"
+            id="Email"
+            name="Email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="senha"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="senha">Confirme a senha:</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Confirme a senha"
+            required
+          />
+        </div>
+
+        <button class="BotaoUniversal" type="submit">Cadastrar</button>
+        <button class="BotaoUniversal" type="voltar">Cancelar</button>
+      </form>
+    </div>
+    <footer class="White">
+      &copy; 2024 Via Mundo. Todos os direitos reservados.
+    </footer>
+  </body>
 </html>
