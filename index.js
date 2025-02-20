@@ -29,6 +29,9 @@ app.use(
 app.get("/login", (requisicao, resposta) => {
   resposta.sendFile(path.resolve("publico/login.html"));
 });
+app.get("/index", (requisicao, resposta) => {
+  resposta.sendFile(path.resolve("publico/index.html"));
+});
 
 app.post("/login", (requisicao, resposta) => {
   const { usuario, senha } = requisicao.body;
